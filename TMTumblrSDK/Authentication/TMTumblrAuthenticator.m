@@ -46,7 +46,7 @@ NSDictionary *formEncodedDataToDictionary(NSData *data);
     // Clear token secret in case authentication was previously started but not finished
     self.OAuthTokenSecret = nil;
     
-    NSString *tokenRequestURLString = [NSString stringWithFormat:@"http://www.tumblr.com/oauth/request_token?oauth_callback=%@",
+    NSString *tokenRequestURLString = [NSString stringWithFormat:@"https://www.tumblr.com/oauth/request_token?oauth_callback=%@",
                                        TMURLEncode([NSString stringWithFormat:@"%@://tumblr-authorize", URLScheme])];
     
     NSMutableURLRequest *request = mutableRequestWithURLString(tokenRequestURLString);
@@ -91,7 +91,7 @@ NSDictionary *formEncodedDataToDictionary(NSData *data);
     // Clear token secret in case authentication was previously started but not finished
     self.OAuthTokenSecret = nil;
     
-    NSString *tokenRequestURLString = [NSString stringWithFormat:@"http://www.tumblr.com/oauth/request_token?oauth_callback=%@",
+    NSString *tokenRequestURLString = [NSString stringWithFormat:@"https://www.tumblr.com/oauth/request_token?oauth_callback=%@",
                                        TMURLEncode([NSString stringWithFormat:@"%@://tumblr-authorize", URLScheme])];
     
     NSMutableURLRequest *request = mutableRequestWithURLString(tokenRequestURLString);
